@@ -1,0 +1,33 @@
+{
+  "name": "@ics-creative/modifyhtml",
+  "version": "1.0.10",
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "",
+  "repository": "https://ics-kano@github.com/ics-creative/modifyhtml.git",
+  "author": "ics-kano <takeshi.kano@ics-web.jp>",
+  "license": "MIT",
+  "bin": {
+    "addMetaAndPolyfill": "dist/addMetaAndPolyfill.js"
+  },
+  "scripts": {
+    "build": "webpack",
+    "test": "npm run test:src",
+    "test:src": "ts-node ./src/addMetaAndPolyfill --src \"test/samples\"  --polyfill \"https://cdn.polyfill.io/v3/polyfill.js?features=default,Document,NodeList.prototype.forEach\"",
+    "test:addMetaAndPolyfill": "addMetaAndPolyfill --src \"test/samples\" --polyfill \"https://cdn.polyfill.io/v3/polyfill.js?features=default,Document,NodeList.prototype.forEach\""
+  },
+  "postinstall": "build",
+  "devDependencies": {
+    "@types/node": "^10.12.18",
+    "@types/rimraf": "^2.0.2",
+    "commander": "^2.19.0",
+    "prettier": "^1.16.1",
+    "rimraf": "^2.6.3",
+    "ts-loader": "^5.3.3",
+    "ts-node": "^8.0.1",
+    "typescript": "^3.0.1",
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1"
+  }
+}
