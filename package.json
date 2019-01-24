@@ -14,8 +14,8 @@
   "scripts": {
     "build": "webpack",
     "test": "npm run test:src",
-    "test:src": "ts-node ./src/addMetaAndPolyfill --src \"test/samples\"  --polyfill \"https://cdn.polyfill.io/v3/polyfill.js?features=default,Document,NodeList.prototype.forEach\"",
-    "test:addMetaAndPolyfill": "addMetaAndPolyfill --src \"test/samples\" --polyfill \"https://cdn.polyfill.io/v3/polyfill.js?features=default,Document,NodeList.prototype.forEach\""
+    "test:src": "ts-node ./src/addMetaAndPolyfill --src \"test/samples\"  --polyfill \"https://cdn.polyfill.io/v3/polyfill.js?features=default,es5,es6,es7,es8,es9,NodeList.prototype.forEach\"",
+    "test:addMetaAndPolyfill": "addMetaAndPolyfill --src \"test/samples\" --polyfill \"https://cdn.polyfill.io/v3/polyfill.js?features=default,es5,es6,es7,es8,es9,NodeList.prototype.forEach\""
   },
   "postinstall": "build",
   "devDependencies": {
